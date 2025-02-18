@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saludyser Logo</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
+</head>
+<body>
+
+    <script>
+        function setup() {
+            createCanvas(300, 200);
+            background("#1BA54D"); // Color de fondo alineado a tu web
+
+            // Dibujar un círculo de fondo
+            fill("#FDD835"); // Amarillo
+            noStroke();
+            ellipse(150, 100, 120, 120);
+
+            // Dibujar una "S" estilizada con una onda médica
+            stroke("white");
+            strokeWeight(6);
+            noFill();
+            beginShape();
+            vertex(100, 70);
+            bezierVertex(140, 30, 160, 120, 200, 80);
+            bezierVertex(180, 140, 120, 140, 100, 170);
+            endShape();
+
+            // Texto "Saludyser" debajo
+            fill("white");
+            noStroke();
+            textAlign(CENTER);
+            textSize(28);
+            textFont("Arial");
+            text("Saludyser", width / 2, height - 20);
+        }
+    </script>
+
+</body>
+</html>
